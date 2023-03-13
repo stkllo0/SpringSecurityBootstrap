@@ -51,20 +51,19 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @DeleteMapping("/{id}")
-    public String removeUser(@PathVariable("id") int id) {
+    @DeleteMapping("/{id}")long id) {
         userService.removeUser(id);
         return "redirect:/admin";
     }
 
 //    @GetMapping("/edit/{id}")
-//    public String getEditionUserForm(Model model, @PathVariable("id") int id) {
+//    public String getEditionUserForm(Model model, @PathVariable("id") long id) {
 //        model.addAttribute("user", userService.getUserById(id));
 //        return "redirect:/admin";
 //    }
 
     @PatchMapping("/update/{id}")
-    public String updateUser(@ModelAttribute("user") User user, @PathVariable("id") int id) {
+    public String updateUser(@ModelAttribute("user") User user, @PathVariable("id") long id) {
         userService.updateUser(id, user);
         return "redirect:/admin";
 
