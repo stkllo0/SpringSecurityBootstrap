@@ -33,7 +33,7 @@ public class AdminController {
         model.addAttribute("users", userService.getAllUsers());
         model.addAttribute("roles", roleService.getAllRoles());
         model.addAttribute("user", new User());
-        model.addAttribute("thisUser", user);
+//        model.addAttribute("thisUser", user);
         return "allUsers";
     }
 
@@ -57,11 +57,11 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @GetMapping("/edit/{id}")
-    public String getEditionUserForm(Model model, @PathVariable("id") int id) {
-        model.addAttribute("user", userService.getUserById(id));
-        return "redirect:/admin";
-    }
+//    @GetMapping("/edit/{id}")
+//    public String getEditionUserForm(Model model, @PathVariable("id") int id) {
+//        model.addAttribute("user", userService.getUserById(id));
+//        return "redirect:/admin";
+//    }
 
     @PatchMapping("/update/{id}")
     public String updateUser(@ModelAttribute("user") User user, @PathVariable("id") int id) {
