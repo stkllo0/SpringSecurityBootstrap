@@ -107,24 +107,24 @@
                                                                    disabled/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="firstName2"><b>First Name</b></label>
+                                                            <label for="name"><b>First Name</b></label>
                                                             <input type="text"
                                                                    th:name="firstName"
                                                                    th:value="*{username}" class="form-control"
-                                                                   id="firstName2"/>
+                                                                   id="name"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="lastName2"><b>Last Name</b></label>
+                                                            <label for="lastName"><b>Last Name</b></label>
                                                             <input type="text"
                                                                    th:name="lastName"
                                                                    th:value="*{lastName}" class="form-control"
-                                                                   id="lastName2"/>
+                                                                   id="lastName"/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="salary"><b>Salary</b></label>
                                                             <input type="number"
                                                                    th:name="salary"
-                                                                   th:value="*{salary}" class="form-control" id="age2"/>
+                                                                   th:value="*{salary}" class="form-control" id="salary"/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="password"><b>Password</b></label>
@@ -137,7 +137,7 @@
                                                                 <label for="roles"><b>Role</b></label>
                                                                 <select th:name="roles"
                                                                         th:value="*{roles}" multiple
-                                                                        class="form-control form-control-sm" id="role"
+                                                                        class="form-control form-control-sm" id="role1"
                                                                         name="roles" size="3" required>
                                                                     <option th:each="role: ${roles}"
                                                                             th:value="${role.id}"
@@ -176,39 +176,39 @@
                                                           th:action="@{/admin/{id}(id=${user.getId()})}"
                                                           th:object="${user}">
                                                         <div class="form-group">
-                                                            <label for="ID"><b>ID</b></label>
+                                                            <label for="id1"><b>ID</b></label>
                                                             <input type="number"
                                                                    th:name="id"
                                                                    th:value="*{id}" class="form-control" id="id1"
                                                                    disabled/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="firstName2"><b>First Name</b></label>
+                                                            <label for="name1"><b>First Name</b></label>
                                                             <input type="text"
                                                                    th:name="firstName"
                                                                    th:value="${user.username}" class="form-control"
-                                                                   id="firstName"/>
+                                                                   id="name1"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="lastName2"><b>Last Name</b></label>
+                                                            <label for="lastName1"><b>Last Name</b></label>
                                                             <input type="text"
                                                                    th:name="lastName"
                                                                    th:value="${user.lastName}" class="form-control"
-                                                                   id="lastName"/>
+                                                                   id="lastName1"/>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="salary"><b>Salary</b></label>
+                                                            <label for="salary1"><b>Salary</b></label>
                                                             <input type="number"
                                                                    th:name="salary"
                                                                    th:value="${user.salary}" class="form-control"
-                                                                   id="salary"/>
+                                                                   id="salary1"/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="role"><b>Role</b></label>
                                                             <input type="text"
                                                                    th:name="role"
                                                                    th:value="*{getRoles()}" class="form-control"
-                                                                   id="role2"/>
+                                                                   id="role"/>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"
