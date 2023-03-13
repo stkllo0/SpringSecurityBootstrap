@@ -8,12 +8,12 @@
     <title>userHomePage</title>
     <style>
         .block-left {
-            width: 20%;
+            width: 10%;
             float: left;
         }
 
         .block-right {
-            width: 80%;
+            width: 90%;
             float: right;
         }
     </style>
@@ -32,7 +32,14 @@
     </div>
 </nav>
 <div class="block-left">
-    <button type="button" class="btn btn-primary col-md-12 text-left">User</button>
+    <nav class="nav flex-column nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/user">User</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+        </li>
+    </nav>
 </div>
 <div class="block-right">
     <header><h4> &nbsp;User Information Page</h4>
