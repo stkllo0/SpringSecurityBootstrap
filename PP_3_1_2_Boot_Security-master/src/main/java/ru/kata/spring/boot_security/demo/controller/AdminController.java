@@ -16,7 +16,6 @@ public class AdminController {
 
     private final UserServiceImpl userService;
     private final RoleServiceImpl roleService;
-    private final UserRepository userRepository;
 
     public AdminController(UserServiceImpl userService, RoleServiceImpl roleService) {
         this.userService = userService;
