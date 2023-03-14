@@ -18,11 +18,9 @@ public class AdminController {
     private final RoleServiceImpl roleService;
     private final UserRepository userRepository;
 
-    public AdminController(UserServiceImpl userService, RoleServiceImpl roleService,
-                           UserRepository userRepository) {
+    public AdminController(UserServiceImpl userService, RoleServiceImpl roleService) {
         this.userService = userService;
         this.roleService = roleService;
-        this.userRepository = userRepository;
     }
 
 
@@ -33,17 +31,10 @@ public class AdminController {
         model.addAttribute("users", userService.getAllUsers());
         model.addAttribute("roles", roleService.getAllRoles());
         model.addAttribute("user", new User());
-//        model.addAttribute("thisUser", user);
         return "allUsers";
     }
 
 
-//    @GetMapping("/add")
-//    public String getCreationUserForm(Model model) {
-//        User user = new User();
-//        model.addAttribute("user", user);
-//        return "redirect:/admin";
-//    }
 
     @PostMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
@@ -56,11 +47,6 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-//    @GetMapping("/edit/{id}")
-//    public String getEditionUserForm(Model model, @PathVariable("id") long id) {
-//        model.addAttribute("user", userService.getUserById(id));
-//        return "redirect:/admin";
-//    }
 
     @PatchMapping("/update/{id}")
     public String updateUser(@ModelAttribute("user") User user, @PathVariable("id") long id) {
